@@ -52,24 +52,28 @@ Even though CVE-2019-11043 is several years old, the vulnerability continues to 
 
 - **Attackers love "low hanging fruit."** A vulnerability that enables *remote code execution + tunnel-based persistence* with minimal skill required will always remain a high-value target.
 
-In today's threat landscape—where persistent access, stealthy tunneling, and supply-chain weaknesses dominate cybersecurity headlines—understanding and demonstrating how CVE-2019-11043 is exploited provides critical insight into modern attack patterns and defensive gaps.
+In today's threat landscape, where persistent access, stealthy tunneling, and supply-chain weaknesses dominate cybersecurity headlines, understanding and demonstrating how CVE-2019-11043 is exploited provides critical insight into modern attack patterns and defensive gaps.
 
 
 ---
 
 ## **Methodology**
 
+Andrew Masone
 
 
 ---
 
 ## **Results**
 
+Andrew Masone
 
 
 ---
 
 ## **Conclusion**
+
+Andrew Masone + Olaf Madejski
 
 The exploitation of CVE-2019-11043 demonstrates how a single misconfiguration in PHP-FPM and NGINX can lead to **server takeover and persistent adversary access**.  
 The Debian Security Advisory team confirmed that upgrading **php7.0 to version 7.0.33 or later** fully patches this vulnerability.
