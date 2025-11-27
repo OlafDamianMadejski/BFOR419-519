@@ -36,6 +36,25 @@ This attack chain aligns directly with several high-impact **MITRE ATT&CK** tech
 
 These are not theoretical abstractions — they mirror the exact behaviors documented in active exploitation campaigns involving nation-state actors and ransomware groups.
 
+Even though CVE-2019-11043 is several years old, the vulnerability continues to hold relevance due to the following modern security realities:
+
+- **Legacy PHP applications are still everywhere.** Many organizations continue to run outdated PHP 5.x/7.x stacks because of long-term web application dependencies, technical debt, or fear of breaking production systems. These environments often remain unpatched and vulnerable.
+
+- **NGINX + PHP-FPM is one of the most common hosting architectures globally.** This makes vulnerabilities in PHP-FPM extremely attractive to attackers who look for large, long-lasting exploitation surfaces.
+
+- **Reverse tunneling is a core persistence technique across modern threats.** Groups like Lazarus, APT29, FIN11, and numerous ransomware operators use reverse SSH tunnels, WebSocket tunnels, and even PHP-based reverse shells to maintain long-term access without relying on exposed inbound ports.
+
+- **Misconfigurations remain the #1 cause of breaches.** Even when patches exist, misconfigured NGINX “location” blocks and poorly validated PATH_INFO variables continue to expose environments to exploitation.
+
+- **Exploit automation kits still target this CVE.** Tools such as automated scanners, botnets, and IoT malware routinely probe for vulnerable PHP-FPM setups because the exploit results in reliable code execution.
+
+- **Cloud environments are expanding the attack surface.** Poorly secured containers, shared hosting setups, and outdated Docker base images often contain unpatched PHP-FPM versions, leading to rapid lateral movement inside cloud networks.
+
+- **Attackers love "low hanging fruit."** A vulnerability that enables *remote code execution + tunnel-based persistence* with minimal skill required will always remain a high-value target.
+
+In today's threat landscape—where persistent access, stealthy tunneling, and supply-chain weaknesses dominate cybersecurity headlines—understanding and demonstrating how CVE-2019-11043 is exploited provides critical insight into modern attack patterns and defensive gaps.
+
+
 ---
 
 ## **Methodology**
